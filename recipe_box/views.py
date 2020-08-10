@@ -18,5 +18,4 @@ def post_detail(request, post_id):
 def user_detail(request, author_id):
     author = Author.objects.filter(id=author_id).first()
     recipes = Recipe.objects.filter(author=author.id)
-    return render(request, "user_detail.html", {
-        "author": author, "recipes": recipes})
+    return render(request, "user_detail.html", {"author": author, "recipes": recipes})
