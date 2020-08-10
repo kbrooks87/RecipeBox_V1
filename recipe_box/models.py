@@ -15,8 +15,8 @@ class Author(models.Model):
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
     description = models.TextField()
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
     time_required = models.CharField(max_length=20)
     instructions = models.TextField()
     date_time = models.DateTimeField(default=timezone.now)
