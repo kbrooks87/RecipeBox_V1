@@ -44,7 +44,5 @@ def author_form_view(request):
         form = AuthorForm(request.POST)
         form.save()
         return HttpResponseRedirect(reverse("homepage"))
-    
     form = AuthorForm()
     return render(request, "generic_form.html", {"form": form})
-    
