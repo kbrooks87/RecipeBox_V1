@@ -9,7 +9,15 @@
 <div>
     <h1>Recipe Box</h1>
 
-    <h2>Recipes</h2>
+    <h2>Am i authenticated? {{ request.user.is_authenticated }}</h2>
+    <ul>
+        <li>
+            <a href="/signup/">Sign up</a>
+        </li>
+        <li>
+            <a href="/login/">Login</a>
+        </li>
+    </ul>
 
     <ul>
         {% for post in recipe %}
@@ -18,13 +26,7 @@
             </li>
         {% endfor %}
     </ul>
-
-    <ul>
-        <li>
-            <a href="/newauthor/">New Author</a>
-        </li>
-        <li>
-            <a href="/newrecipe/">New Recipe</a>
-        </li>
-    </ul>
+    <a href="/newrecipe/">New Recipe</a>
+    <br>
+    <a href="/newauthor/">newauthor</a>
 </div>
