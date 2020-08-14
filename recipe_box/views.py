@@ -75,7 +75,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(reverse("loginview"))
+    return HttpResponseRedirect(reverse("homepage"))
 
 
 def signup_view(request):
