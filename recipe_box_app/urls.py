@@ -21,6 +21,8 @@ urlpatterns = [
     path('', views.index, name="homepage"),
     path('post/<int:post_id>/', views.recipe_detail),
     path('author/<int:author_id>/', views.user_detail),
+    path('edit_recipe/<int:recipe_id>/', views.edit_recipe_view),
+    path('add_favorite/<int:recipe_id>/', views.add_favorite_view),
     path('newrecipe/', views.recipe_form_view, name="newrecipe"),
     path('newauthor/', views.author_form_view, name="newauthor"),
     path('login/', views.login_view, name="loginview"),
