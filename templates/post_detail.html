@@ -17,4 +17,14 @@
         <p>{{ post.description }}</p>
         <p>{{ post.instructions }}</p>
     {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <a href="/add_favorite/{{ post.id }}/">Add to Favorites</a>
+    {%endif%}
+
+    {% if request.user.author == post.author or request.user.is_staff%}
+        <a href="/edit_recipe/{{ post.id }}/">Edit Recipe</a>
+
+    {% endif %}
+
 </div>

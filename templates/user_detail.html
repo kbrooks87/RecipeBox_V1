@@ -12,13 +12,21 @@
 
     <p>{{ author.bio }}</p>
 
-    <h2>Recipies</h2>
+    <h2>Recipes</h2>
        
     <ul>
         {% for recipe in recipes %}
             <li>
                 <a href="/post/{{ recipe.id }}/">{{ recipe }}</a>
             </li>
+        {% endfor %}
+    </ul>
+    <h3>My Favorite Recipes</h3>
+    <ul>
+        {% for rec in favoriterecipes %}
+        <li>
+            <a href="/post/{{ rec.id }}/">{{ rec}}</a> 
+        </li>
         {% endfor %}
     </ul>
 </div>
